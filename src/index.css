@@ -42,3 +42,24 @@
   --Poppins: "Poppins", sans-serif;
   --Inter: "Inter", sans-serif;
 }
+
+@layer components {
+  .menuUnderLine {
+    position: relative;
+  }
+  .menuUnderLine::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: -1px;
+    width: 0;
+    height: 2px;
+    background-color: var(--Text2__color);
+    opacity: 50%;
+    transition: all linear 0.3s;
+    border-radius: 30px;
+  }
+  .menuUnderLine:hover::after {
+    width: 100%;
+  }
+}
